@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiss of Life Official Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="JS/script.js"></script>
+    <header>
+      <div class="Logo">
+        <a href="index.htm"
+          ><img src="images/kiof_logo.svg" alt="kiof logo"
+        /></a>
+      </div>
+      <div class="Menu">
+        <a href="#">Music</a>
+        <a href="#">Videos</a>
+        <a href="#">Live</a>
+        <a href="#">Gallery</a>
+        <a href="#">Members</a>
+        <a href="#">About KIOF</a>
+        <a href="https://kissoflife-official.com/shop/kr">Store</a>
+      </div>
+    </header>
+    <main>
+      <div id="Home">
+        <video autoplay loop muted playsinline class="background-video">
+          <source src="videos/kiof_video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-text">
+          <h1>KISS OF LIFE</h1>
+          <p>The Official Fan Experience</p>
+        </div>
+      </div>
+      <div id="Music">
+        <div class="music-content">
+          <h2>Music</h2>
+
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/artist/4TEK9tIkcoxib4GxT3O4ky?utm_source=generator"
+            width="100%"
+            height="450"
+            frameborder="0"
+            allowfullscreen=""
+            allow="
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              fullscreen;
+              picture-in-picture;
+            "
+            loading="lazy"
+          ></iframe>
+        </div>
+         <h2>Albums</h2>
+
+
+        <div class="carousel">
+          <button class="carousel-btn left" onclick="moveSlide(-1)">❮</button>
+
+          <div class="carousel-track">
+            <div class="album">
+              <img
+                src="images/KIOF_KISS_OF_LIFE_album_cover.webp"
+                alt="KIOF 2023"
+              />
+            </div>
+
+            <div class="album">
+              <img
+                src="images/KISS_OF_LIFE_Born_to_be_XX_digital_album_cover.webp"
+                alt="KIOF 2023"
+              />
+            </div>
+
+            <div class="album">
+              <img
+                src="images/KISS_OF_LIFE_Lose_Yourself_digital_album_cover.webp"
+                alt="KIOF 2024"
+              />
+            </div>
+
+            <div class="album">
+              <img
+                src="images/KISS_OF_LIFE_Midas_Touch_digital_cover.webp"
+                alt="KIOF 2024"
+              />
+            </div>
+            <div class="album">
+              <img
+                src="images/KISS_OF_LIFE_224_digital_album_cover.webp"
+                alt="KIOF 2025"
+              />
+            </div>
+            <div class="album">
+              <img
+                src="images/KISS_OF_LIFE_Kiss_Road_album_cover.webp"
+                alt="KIOF 2025"
+              />
+            </div>
+            <div class="album">
+              <img
+                src="images/KISS_OF_LIFE_Tokyo_Mission_Start_29_album_cover.webp"
+                alt="KIOF 2025"
+              />
+            </div>
+          </div>
+
+          <button class="carousel-btn right" onclick="moveSlide(1)">❯</button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    </script>
+  </body>
+</html>
