@@ -109,11 +109,28 @@ h2 {
   letter-spacing: 4px;
   margin-bottom: 30px;
 }
+h5 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+.album-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
 .carousel {
   position: relative;
-  width: 400px; /* size of the album */
+  width: 400px;
   margin: auto;
+}
+
+.carousel-window {
   overflow: hidden;
+  width: 100%;
 }
 
 .carousel-track {
@@ -136,10 +153,11 @@ h2 {
 .carousel-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   background: black;
   color: white;
-  border: none;
+  border: solid white 2px;
+  border-radius: 35%;
   font-size: 30px;
   padding: 12px 18px;
   cursor: pointer;
@@ -147,12 +165,13 @@ h2 {
 }
 
 .left {
-  left: 0;
+  left: -70px;
 }
 
 .right {
-  right: 0;
+  right: -70px;
 }
+
 /****************FONT**********************/
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
