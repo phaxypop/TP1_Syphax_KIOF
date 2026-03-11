@@ -44,3 +44,32 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+//////////////////////////////////////////////////////////////////
+const videos = [
+  "IajeQM00yfE",
+  "j6OqLm0lQ68",
+  "52IyDIMyejQ",
+  "xWHWl0vG-38",
+  "yXRlrix-pPk",
+  "VhZk2yUO3AY",
+  "oKVYm8mIUdo",
+  "mIfpVrYIhvM",
+];
+
+let currentVideo = 0;
+
+function changeVideo(direction) {
+  currentVideo += direction;
+
+  if (currentVideo < 0) {
+    currentVideo = videos.length - 1;
+  }
+
+  if (currentVideo >= videos.length) {
+    currentVideo = 0;
+  }
+
+  const player = document.getElementById("video-player");
+
+  player.src = "https://www.youtube.com/embed/" + videos[currentVideo];
+}

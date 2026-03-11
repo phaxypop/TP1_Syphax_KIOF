@@ -25,11 +25,9 @@
       </div>
       <div class="Menu">
         <a href="#Music">Music</a>
-        <a href="#">Videos</a>
-        <a href="#">Live</a>
-        <a href="#">Gallery</a>
-        <a href="#">Members</a>
-        <a href="#">About KIOF</a>
+        <a href="#Videos">Videos</a>
+        <a href="#Gallery">Gallery</a>
+        <a href="#Members">Members</a>
         <a href="https://kissoflife-official.com/shop/kr">Store</a>
       </div>
     </header>
@@ -46,7 +44,7 @@
           <p>The Official Fan Experience</p>
         </div>
       </div>
-      <div id="Music">
+      <section id="Music">
         <div class="music-content">
           <h2>Music</h2>
 
@@ -154,38 +152,41 @@
 
           <button class="carousel-btn right" onclick="moveSlide(1)">❯</button>
         </div>
-      </div>
-      <div id="Videos">
+      </section>
+      <section id="Videos">
         <h2>Videos</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/IajeQM00yfE?si=EUQbjaPiIN5cT7Wn"
-          title="YouTube video player"
-          frameborder="0"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div id="Live">
-        <h2>Live shows</h2>
-        <table>
-          <tr>
-            <th>Date</th>
-            <th>Place</th>
-            <th>Tickets</th>
-          </tr>
-        </table>
-      </div>
+
+        <div class="video-carousel">
+          <button class="video-btn left" onclick="changeVideo(-1)">❮</button>
+
+          <iframe
+            id="video-player"
+            width="900"
+            height="500"
+            src="https://www.youtube.com/embed/IajeQM00yfE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+
+          <button class="video-btn right" onclick="changeVideo(1)">❯</button>
+        </div>
+      </section>
+      <section id="Gallery">
+        <h2>Gallery</h2>
+      </section>
+      <section id="Members">
+        <h2>Members</h2>
+      </section>
     </main>
     <footer></footer>
   </body>
