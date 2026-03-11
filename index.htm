@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" href="images/KIOF_favicon.png" />
   </head>
   <body>
-    <script src="JS/script.js"></script>
+    <script src="script.js"></script>
     <header>
       <div class="Logo">
         <a href="index.htm"
@@ -189,5 +189,31 @@
       </section>
     </main>
     <footer></footer>
+    <script>
+      const videos = [
+        "IajeQM00yfE",
+        "52IyDIMyejQ",
+        "yXRlrix-pPk",
+        "mIfpVrYIhvM",
+      ];
+
+      let currentVideo = 0;
+
+      function changeVideo(direction) {
+        currentVideo += direction;
+
+        if (currentVideo < 0) {
+          currentVideo = videos.length - 1;
+        }
+
+        if (currentVideo >= videos.length) {
+          currentVideo = 0;
+        }
+
+        const player = document.getElementById("video-player");
+
+        player.src = `https://www.youtube.com/embed/${videos[currentVideo]}?rel=0`;
+      }
+    </script>
   </body>
 </html>
