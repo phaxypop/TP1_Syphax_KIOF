@@ -179,16 +179,121 @@
           </iframe>
 
           <button class="video-btn right" onclick="changeVideo(1)">❯</button>
+          <a href="https://www.youtube.com/@KISSOFLIFE_official/featured"
+            ><h5>Kiss Of Life Official Channel YouTube link</h5></a
+          >
         </div>
       </section>
       <section id="Gallery">
         <h2>Gallery</h2>
+
+        <div class="gallery-container">
+          <img src="images/gallery/2188660270.webp" class="gallery-img" />
+          <img
+            src="images/gallery/241203_KISSOFLIFE_LA_ErickaP_008-1024x682.webp"
+            class="gallery-img"
+          />
+          <img
+            src="images/gallery/241203_KISSOFLIFE_LA_ErickaP_011-1024x683.jpg"
+            class="gallery-img"
+          />
+          <img
+            src="images/gallery/GettyImages-2152829804.webp"
+            class="gallery-img"
+          />
+          <img
+            src="images/gallery/kiss-of-life-2024-2025-kiss-road-world-tour-concert-getty.jpg"
+            class="gallery-img"
+          />
+          <img src="images/gallery/Kiss-of-Life-3.webp" class="gallery-img" />
+          <img
+            src="images/gallery/kiss-of-life-live-review-s2-entertainment.jpg"
+            class="gallery-img"
+          />
+          <img
+            src="images/gallery/KISS_OF_LIFE_at_Lose_Yourself_showcase.png"
+            class="gallery-img"
+          />
+          <img
+            src="images/gallery/NME-HERO-KISS-OF-LIFE-CREDIT-AHN-HONGJE@2560x1625-2136x1356.jpg"
+            class="gallery-img"
+          />
+          <img src="images/gallery/ori.jpg" class="gallery-img" />
+          <img
+            src="images/gallery/KISS_OF_LIFE_at_Music_Bank_(4K)_20240712_02.png"
+            class="gallery-img"
+          />
+          <img
+            src="images/gallery/vlcsnap-2025-06-09-18h15m56s575.jpg"
+            class="gallery-img"
+          />
+        </div>
+
+        <div id="imagePopup">
+          <img id="popupImg" />
+        </div>
       </section>
       <section id="Members">
         <h2>Members</h2>
+        <div class="member-selector">
+          <span class="member-name active" onclick="showMember('julie')"
+            >Julie</span
+          >
+          <span class="member-name" onclick="showMember('natty')">Natty</span>
+          <span class="member-name" onclick="showMember('belle')">Belle</span>
+          <span class="member-name" onclick="showMember('haneul')">Haneul</span>
+        </div>
+
+        <div class="member-content">
+          <img id="member-photo" src="images/julie.webp" />
+          <div class="space"></div>
+          <div class="member-info">
+            <h2 id="member-name">Julie</h2>
+
+            <h5>
+              <strong>Birthday:</strong>
+              <span id="member-birthday">March 29, 2000</span>
+            </h5>
+            <h5>
+              <strong>Role:</strong>
+              <span id="member-role">Leader, Main Rapper</span>
+            </h5>
+            <h5>
+              <strong>Nationality:</strong>
+              <span id="member-nationality">Korean-American</span>
+            </h5>
+            <h5>
+              <strong>Fun Fact:</strong>
+              <span id="member-fact"
+                >She lived in Hawaii before becoming an idol.</span
+              >
+            </h5>
+          </div>
+        </div>
       </section>
     </main>
-    <footer></footer>
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-nav">
+          <h3>Navigation</h3>
+          <a href="#Music">Music</a>
+          <a href="#Videos">Videos</a>
+          <a href="#Gallery">Gallery</a>
+          <a href="#Members">Members</a>
+          <a href="#Store">Store</a>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow</h3>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">Spotify</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2026 Kiss of Life Fan Website</p>
+    </footer>
     <script>
       const videos = [
         "IajeQM00yfE",
@@ -213,6 +318,76 @@
         const player = document.getElementById("video-player");
 
         player.src = `https://www.youtube.com/embed/${videos[currentVideo]}?rel=0`;
+      }
+      /////////////////////////////////////////////////////////////////////////////
+      const galleryImages = document.querySelectorAll(".gallery-img");
+      const popup = document.getElementById("imagePopup");
+      const popupImg = document.getElementById("popupImg");
+
+      galleryImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          popup.style.display = "flex";
+          popupImg.src = img.src;
+        });
+      });
+
+      popup.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+      ////////////////////////////////////////////////////////////////////////////
+      const members = {
+        julie: {
+          name: "Julie",
+          birthday: "March 29, 2000",
+          role: "Leader, Main Rapper",
+          nationality: "Korean-American",
+          fact: "She lived in Hawaii before becoming an idol.",
+          photo: "images/julie.webp",
+        },
+        natty: {
+          name: "Natty",
+          birthday: "May 30, 2002",
+          role: "Main Dancer, Lead Vocalist",
+          nationality: "Thai",
+          fact: "She trained in Korea since she was very young.",
+          photo: "images/natty.webp",
+        },
+        belle: {
+          name: "Belle",
+          birthday: "March 20, 2004",
+          role: "Main Vocalist",
+          nationality: "Korean-American",
+          fact: "Her father is famous singer Shim Shin.",
+          photo: "images/belle.webp",
+        },
+
+        haneul: {
+          name: "Haneul",
+          birthday: "May 25, 2005",
+          role: "Lead Vocalist",
+          nationality: "Korean",
+          fact: "She is the youngest member (maknae).",
+          photo: "images/haneul.webp",
+        },
+      };
+
+      function showMember(member) {
+        document.getElementById("member-name").textContent =
+          members[member].name;
+        document.getElementById("member-birthday").textContent =
+          members[member].birthday;
+        document.getElementById("member-role").textContent =
+          members[member].role;
+        document.getElementById("member-nationality").textContent =
+          members[member].nationality;
+        document.getElementById("member-fact").textContent =
+          members[member].fact;
+        document.getElementById("member-photo").src = members[member].photo;
+
+        document
+          .querySelectorAll(".member-name")
+          .forEach((el) => el.classList.remove("active"));
+        event.target.classList.add("active");
       }
     </script>
   </body>
