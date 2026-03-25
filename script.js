@@ -47,3 +47,9 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 //////////////////////////////////////////////////////////////////
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
