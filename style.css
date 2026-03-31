@@ -334,7 +334,7 @@ h5 {
   background-color: #111;
   color: white;
   padding: 40px 20px;
-   font-family: "Bebas Neue", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -345,6 +345,7 @@ h5 {
   gap: 80px;
   margin-bottom: 20px;
   align-items: center;
+  font-size: 1.3rem;
 }
 
 .footer-nav,
@@ -390,7 +391,15 @@ footer img {
     justify-content: center;
   }
   .Menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .Menu a {
     display: none;
+  }
+
+  .Menu .shop-link {
+    display: block;
   }
   .Logo {
     text-align: center;
